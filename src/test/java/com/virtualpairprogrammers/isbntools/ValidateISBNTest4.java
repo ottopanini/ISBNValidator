@@ -7,7 +7,7 @@ import static org.junit.Assert.*;
 public class ValidateISBNTest4 {
 
     @Test
-    public void test() {
-        //fail();
+    public void checkAValidISBN() {
+        fail();
     }
 }
