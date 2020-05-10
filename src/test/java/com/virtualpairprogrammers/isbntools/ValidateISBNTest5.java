@@ -18,6 +18,14 @@ class ValidateISBNTest5 {
     }
 
     @Test
+    public void isbnNumbersEndingbyXAreValid() {
+        ValidateISBN validator = new ValidateISBN();
+        boolean result = validator.checkISBN("012000030X");
+        assertTrue(result);
+    }
+
+
+        @Test
     public void checkAnInvalidISBN() {
         ValidateISBN validator = new ValidateISBN();
         //changed the last digit
