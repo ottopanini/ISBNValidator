@@ -3,6 +3,7 @@ package com.virtualpairprogrammers.isbntools;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.fail;
 
 public class ValidateISBNTest4 {
     @Test
@@ -24,4 +25,11 @@ public class ValidateISBNTest4 {
 
         assertFalse(result);
     }
+
+    @Test(expected = NumberFormatException.class)
+    public void nineDigitsISBNsNotallowed() {
+        ValidateISBN validator = new ValidateISBN();
+        validator.checkISBN("123456789");
+    }
+
 }
