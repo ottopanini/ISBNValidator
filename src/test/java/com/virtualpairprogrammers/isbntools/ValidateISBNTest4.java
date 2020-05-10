@@ -10,8 +10,10 @@ public class ValidateISBNTest4 {
         ValidateISBN validator = new ValidateISBN();
         //the original number was with a heading Zero: "0140449116" but did'nt work with integer parameter
         boolean result = validator.checkISBN(140449116);
+        assertTrue("first value", result);
 
-        assertTrue(result);
+        result = validator.checkISBN(140177396);
+        assertTrue("second value", result);
     }
 
     @Test
