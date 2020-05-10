@@ -10,10 +10,10 @@ class ValidateISBNTest5 {
     public void checkAValidISBN() {
         ValidateISBN validator = new ValidateISBN();
         //the original number was with a heading Zero: "0140449116" but did'nt work with integer parameter
-        boolean result = validator.checkISBN(140449116);
+        boolean result = validator.checkISBN("0140449116");
         assertTrue(result, "first value");
 
-        result = validator.checkISBN(140177396);
+        result = validator.checkISBN("0140177396");
         assertTrue(result, "second value");
     }
 
@@ -21,7 +21,7 @@ class ValidateISBNTest5 {
     public void checkAnInvalidISBN() {
         ValidateISBN validator = new ValidateISBN();
         //changed the last digit
-        boolean result = validator.checkISBN(140449117);
+        boolean result = validator.checkISBN("0140449117");
 
         assertFalse(result);
     }
