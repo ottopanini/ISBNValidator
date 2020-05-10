@@ -14,11 +14,13 @@ public class ValidateISBNTest4 {
         assertTrue(result);
     }
 
+    @Test
     public void checkAnInvalidISBN() {
         ValidateISBN validator = new ValidateISBN();
         //changed the last digit
         boolean result = validator.checkISBN(140449117);
 
+        fail();
         assertFalse(result);
     }
 }
