@@ -20,7 +20,6 @@ public class ValidateISBNTest4 {
         //changed the last digit
         boolean result = validator.checkISBN(140449117);
 
-        fail();
         assertFalse(result);
     }
 }
