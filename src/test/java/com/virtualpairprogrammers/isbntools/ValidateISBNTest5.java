@@ -31,4 +31,10 @@ class ValidateISBNTest5 {
         ValidateISBN validator = new ValidateISBN();
         assertThrows(NumberFormatException.class, () -> validator.checkISBN("123456789"));
     }
+
+    @Test
+    public void noneNumericISBNsNotallowed() {
+        ValidateISBN validator = new ValidateISBN();
+        assertThrows(NumberFormatException.class, () -> validator.checkISBN("helloworld"));
+    }
 }
